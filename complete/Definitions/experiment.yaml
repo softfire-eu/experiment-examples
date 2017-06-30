@@ -16,9 +16,16 @@ topology_template:
         nsd_name: "integration-test"
       type: NfvResource
 
-#    mynsd:
-#      properties:
-#        resource_id: fokus-cell
-#      type: PhysicalResource
+    myphysiscal:
+      properties:
+        resource_id: fokus-cell
+      type: PhysicalResource
+
+    sdn_fokus_dev:
+      properties:
+        resource_id: sdn-controller-opensdncore-fokus
+      type: SdnResource
+
+
 
 tosca_definitions_version: tosca_simple_yaml_1_0
