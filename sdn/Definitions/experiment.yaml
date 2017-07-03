@@ -26,5 +26,10 @@ topology_template:
         resource_id: sdn-controller-opensdncore-fokus
       type: SdnResource
 
+    sdn_ericsson:
+      properties:
+        resource_id: sdn-controller-odl-ericsson
+      type: SdnResource
+
 
 tosca_definitions_version: tosca_simple_yaml_1_0
