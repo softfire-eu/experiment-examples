@@ -41,13 +41,13 @@ topology_template:
       type: tosca.nodes.nfv.CP
     VDU1: 
       properties: 
-        scale_in_out: 10
+        scale_in_out: 2
       requirements: 
         - virtual_link: CP1
       type: tosca.nodes.nfv.VDU
     VDU2: 
       properties: 
-        scale_in_out: 10
+        scale_in_out: 2
       requirements: 
         - virtual_link: CP2
       type: tosca.nodes.nfv.VDU
