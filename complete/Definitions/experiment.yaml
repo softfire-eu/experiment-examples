@@ -8,24 +8,65 @@ topology_template:
 
     mynsd:
       properties:
-        resource_id: clean-ubuntu
+        resource_id: clean-ubuntu-with-fips
         testbeds:
           ANY: fokus
-        ssh_pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNyPHgao8TpwOuEYo497w7kKOztMiRQ9m59ZBZr7Xnb6LWcIhjuqrxlFmNlluw7V1+hot6RA6psh2xPC/+urTfevIY6p8pOZmPtMToZmP2/5BPVkBAHAUISU/BZxDAM75QX14CHg/4imcfLxzLyx4XY0SjwfrxtqTTJJW2khKJ5eNoMHnw9+NwNiM1BY9A1khZ2WXZMAlG8+NkZU+UZhIiyHWYZQU8ZrC02qI/zFfaGFX7OC/yDGbZOeGV/cuissvai4vn8gtS1Stdj+QJZ/Mcl3t2A65FlW8oSYzih+OrxLsvJ2w8dxBBdw39lPcihb3e8Za29aiKMrUINleVJ82P"
-        file_name: "Files/clean-ubuntu.csar"
-        nsd_name: "integration-test"
+#          VDU1: fokus
+#          VDU2: ads
+        ssh_pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9zE9+xt63COcgFSS2Qvr3loodZOwwixrCfUG/R7I5RNjYcRWZAa35s5XttccM0iEmFbHoyfoO0fcOX5a9P64g8XfDwbmeTB8zhlSHiRuSgxlKQdwbk1tlR8womZb9o+5x3WQTAnYkHTxQhsuI5Jl6mb/WqPJsHg4iVnlPVI4cFAABGVC0HVc+EDR4Eosu5TXqEg4yeA2xm+4FY67mby42n/Fu2VatlPrLqOd1oSA1f+wnELR7x+rt6JYXybXkj5foywX0vKsk0j6s4/uT99HYzHClOPYKlP+N8ISZgQOAuSSvE0pxj6HcxuaLwHipSh8q5ckFhZR0JyLj/F1gDg9V"
+        file_name: "Files/clean-ubuntu-with-fips.csar"
+        nsd_name: "integration-test-1"
       type: NfvResource
 
-    myphysiscal:
+#    mynsd2:
+#      properties:
+#        resource_id: clean-ubuntu-2
+#        testbeds:
+#          ANY: ericsson
+#        ssh_pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9zE9+xt63COcgFSS2Qvr3loodZOwwixrCfUG/R7I5RNjYcRWZAa35s5XttccM0iEmFbHoyfoO0fcOX5a9P64g8XfDwbmeTB8zhlSHiRuSgxlKQdwbk1tlR8womZb9o+5x3WQTAnYkHTxQhsuI5Jl6mb/WqPJsHg4iVnlPVI4cFAABGVC0HVc+EDR4Eosu5TXqEg4yeA2xm+4FY67mby42n/Fu2VatlPrLqOd1oSA1f+wnELR7x+rt6JYXybXkj5foywX0vKsk0j6s4/uT99HYzHClOPYKlP+N8ISZgQOAuSSvE0pxj6HcxuaLwHipSh8q5ckFhZR0JyLj/F1gDg9V"
+#        file_name: "Files/clean-ubuntu-2.csar"
+#        nsd_name: "integration-test2"
+#      type: NfvResource
+
+#    myphysiscal:
+#      properties:
+#        resource_id: fokus-cell
+#      type: PhysicalResource
+#
+#    sdn_fokus_dev:
+#      properties:
+#        resource_id: sdn-controller-opensdncore-fokus
+#      type: SdnResource
+
+#    sdn_ericsson:
+#      properties:
+#        resource_id: sdn-controller-odl-ericsson
+#      type: SdnResource
+
+
+#    firewall_1:
+#      type: SecurityResource
+#      properties:
+#        resource_id: firewall
+#        want_agent: false
+#        testbed: fokus
+#        default_rule: allow
+#        denied_ips: [172.20.10.138]
+#        logging: true
+#
+#    firewall_2:
+#      type: SecurityResource
+#      properties:
+#        resource_id: firewall
+#        want_agent: true
+#        default_rule: allow
+#        denied_ips: [127.0.0.1, 172.20.30.2]
+#        logging: true
+
+    mn:
       properties:
-        resource_id: fokus-cell
-      type: PhysicalResource
-
-    sdn_fokus_dev:
-      properties:
-        resource_id: sdn-controller-opensdncore-fokus
-      type: SdnResource
-
-
+        resource_id: monitor
+        testbed: fokus
+      type: MonitoringResource
 
 tosca_definitions_version: tosca_simple_yaml_1_0

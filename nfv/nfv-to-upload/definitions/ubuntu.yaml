@@ -1,7 +1,7 @@
 --- 
 description: "NS for deploying a clean ubuntu machine"
 metadata: 
-  ID: Ubuntu
+  ID: Ubuntu Example without fips
   vendor: TUB
   version: "3.2.0"
 relationships_template: 
@@ -27,14 +27,14 @@ topology_template:
   node_templates: 
     CP1: 
       properties: 
-        floatingIP: random
+#        floatingIP: random
       requirements: 
         - virtualBinding: VDU1
         - virtualLink: softfire-internal
       type: tosca.nodes.nfv.CP
     CP2: 
       properties: 
-        floatingIP: random
+#        floatingIP: random
       requirements: 
         - virtualBinding: VDU2
         - virtualLink: softfire-internal
