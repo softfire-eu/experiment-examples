@@ -14,10 +14,6 @@ node_types:
         type: string
         required: true
 
-  SdnResource:
-    derived_from: eu.softfire.BaseResource
-    description: Defines a SDN resource request in the SoftFIRE Middleware
-
 
   MonitoringResource:
     derived_from: eu.softfire.BaseResource
@@ -27,54 +23,11 @@ node_types:
         type: string
         required: false
         description: Location where to deploy the monitoring server
+      lan_name:
+        type: string
+        required: false
+        description: Openstack lan name where to deploy the monitoring server
 
-  SecurityResource:
-    derived_from: eu.softfire.BaseResource
-    description: Defines a Security agent to be deployed. More details on *docu_URL*
-    properties:
-      resource_id:
-        type: string
-        required: true
-        default: firewall
-      testbed:
-        type: string
-        required: false
-      want_agent:
-        type: boolean
-        required: true
-        default: true
-      logging:
-        type: boolean
-        required: true
-        default: true
-      allowed_ips:
-        type: list
-        entry_schema:
-          type: string
-        required: false
-      denied_ips:
-        type: list
-        entry_schema:
-            type: string
-        required: false
-      default_rule:
-        type: string
-        required: true 
-
-  NfvResource:
-    derived_from: eu.softfire.BaseResource
-    description: Defines a NFV resoruce request in the SoftFIRE Middleware
-    properties:
-      testbeds:
-        type: map
-        entry_schema:
-          description: mapping between vnf types and testbed. Or 'all':<testbed_name> for all in one
-          type: string
-      nsd_name:
-        type: string
-      file_name:
-        type: string
-        required: false
 
 topology_template:
   node_templates:
@@ -82,4 +35,5 @@ topology_template:
       type: MonitoringResource
       properties:
         testbed: ericsson
+        lan_name: Zabbix_Lan
         resource_id: monitor
