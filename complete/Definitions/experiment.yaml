@@ -51,6 +51,7 @@ topology_template:
       properties:
         resource_id: monitor
         testbed: fokus
+        lan_name: softfire-internal
       type: MonitoringResource
 
 tosca_definitions_version: tosca_simple_yaml_1_0
