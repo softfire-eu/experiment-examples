@@ -4,32 +4,17 @@ imports:
   - 
     softfire_node_types: "http://docs.softfire.eu/etc/softfire_node_types.yaml"
 topology_template: 
-  node_templates: 
-
-#    mynsd:
-#      properties:
-#        resource_id: clean-ubuntu
-#        testbeds:
-#          ANY: fokus
-#        ssh_pub_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNyPHgao8TpwOuEYo497w7kKOztMiRQ9m59ZBZr7Xnb6LWcIhjuqrxlFmNlluw7V1+hot6RA6psh2xPC/+urTfevIY6p8pOZmPtMToZmP2/5BPVkBAHAUISU/BZxDAM75QX14CHg/4imcfLxzLyx4XY0SjwfrxtqTTJJW2khKJ5eNoMHnw9+NwNiM1BY9A1khZ2WXZMAlG8+NkZU+UZhIiyHWYZQU8ZrC02qI/zFfaGFX7OC/yDGbZOeGV/cuissvai4vn8gtS1Stdj+QJZ/Mcl3t2A65FlW8oSYzih+OrxLsvJ2w8dxBBdw39lPcihb3e8Za29aiKMrUINleVJ82P"
-#        file_name: "Files/clean-ubuntu.csar"
-#        nsd_name: "integration-test"
-#      type: NfvResource
-
-#    mynsd:
-#      properties:
-#        resource_id: fokus-cell
-#      type: PhysicalResource
+  node_templates:
 
     sdn_fokus_dev:
       properties:
         resource_id: sdn-controller-opensdncore-fokus
       type: SdnResource
 
-    sdn_ericsson:
-      properties:
-        resource_id: sdn-controller-odl-ericsson
-      type: SdnResource
+#    sdn_ericsson:
+#      properties:
+#        resource_id: sdn-controller-odl-ericsson
+#      type: SdnResource
 
 
 tosca_definitions_version: tosca_simple_yaml_1_0
