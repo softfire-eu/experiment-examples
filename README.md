@@ -5,13 +5,8 @@
   Licensed under [Apache v2 License](http://www.apache.org/licenses/LICENSE-2.0).
 
 # experiment-examples
-This repo contains all the experiment examples
+This project contains all the experiment examples that can be deployed from the Experiment Manager.
 
-
-## Technical Requirements
-
-
-## Installation and configuration
 
 
 ## Issue tracker
